@@ -1,0 +1,27 @@
+micronaut:
+  application:
+    name: MicronautApp
+  server:
+    port: 8702
+    thread-selection: IO
+netty:
+  default:
+    allocator:
+      max-order: 3
+datasources:
+  default:
+    dialect: POSTGRES
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+jpa:
+  default:
+    entity-scan:
+      packages: 'io.containerapps.javaruntime.workshop.micronaut'
+    properties:
+      hibernate:
+        bytecode:
+          provider: none
+        hbm2ddl:
+          auto: none
